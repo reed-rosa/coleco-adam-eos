@@ -1,0 +1,15 @@
+The complete reference ROM is intentionally not bundled in the source package.
+
+Required filename: eos 6 rev 57 08dd.u22
+Required size: 16384 bytes
+Required MD5: cf10b154f2e006a9740d7653cfc47cab
+
+Place the file at:
+  rom_reference\eos 6 rev 57 08dd.u22
+
+or pass its full path to:
+  .\build_eos_assembleable_source.ps1 -ReferenceRom '<path>'
+
+The build reconstructs bytes 0000-1FFF (the EOS bank) from the assembly source.
+Bytes 2000-3FFF are copied unchanged from this verified reference input. The
+second bank is not represented by, or reconstructed from, the EOS OCR listing.
